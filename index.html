@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Brooklyn Bridge - New York City</title>
+	<meta charset="utf-8">
+	<meta name='viewport' content="width=device-width">
+	<link rel="stylesheet" type="text/css" href="./index.css">
+	<link rel="manifest" href="./manifest.json">
+</head>
+<body>
+	<h2>Brooklyn Bridge 1987</h2>
+	<a href="./second.html">jump</a>
+	<img src="./brooklyn.jpg" alt='Brooklyn Bridge - New York'/>
+	<script>
+		if('serviceWorker' in navigator) {
+			navigator.serviceWorker.register('./sw.js').then(registration => {
+				console.log('注册...')
+			}).catch(err => {
+				console.log(err);
+			})
+		}
+		// setTimeout(function(){
+		// 	var img = new Image();
+		// 	img.src = './hua1.jpg';
+		// 	document.body.appendChild(img);
+		// },10000)
+	</script>
+</body>
+</html>
