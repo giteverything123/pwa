@@ -8,10 +8,15 @@
 	<link rel="manifest" href="./manifest.json">
 </head>
 <body>
-	<h2>Brooklyn Bridge 1997</h2>
+	<h2>Brooklyn Bridge 2007</h2>
 	<a href="./second.html">jump</a>
 	<img src="./brooklyn.jpg" alt='Brooklyn Bridge - New York'/>
 	<script>
+		window.addEventListener('beforeinstallprompt',function(e){
+			e.preventDefault();
+			return false;
+		});
+
 		if('serviceWorker' in navigator) {
 			navigator.serviceWorker.register('./sw.js').then(registration => {
 				console.log('注册...')
