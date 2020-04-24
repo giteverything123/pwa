@@ -12,11 +12,7 @@
 	<a href="./second.html">jump</a>
 	<img src="./brooklyn.jpg" alt='Brooklyn Bridge - New York'/>
 	<script>
-		window.addEventListener('beforeinstallprompt',function(e){
-			e.preventDefault();
-			return false;
-		});
-
+		
 		if('serviceWorker' in navigator) {
 			navigator.serviceWorker.register('./sw.js').then(registration => {
 				console.log('注册...')
